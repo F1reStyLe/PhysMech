@@ -1,14 +1,14 @@
 
 class ToBend:
     """Расчет изгибающего напряжения(sigma) и относительной деформации при изгибе(Е).
-        Параметры образца вводятся в метрах"""
-    __length = 0  # расстояние между опорами, М
-    __width = 0  # ширина испытуемого образца, М
-    __height = 0  # толщина образца, М
-    __F = 1
+        Параметры образца вводятся в миллиметрах"""
+    __length = 0  # расстояние между опорами, мм
+    __width = 0  # ширина испытуемого образца, мм
+    __height = 0  # толщина образца, мм
+    __F = 289.5
     __S = 1
 
-    def __init__(self, length=0.064, width=0.013, height=0.04):
+    def __init__(self, length=64.0, width=13.0, height=4.0):
         self.__length = length
         self.__width = width
         self.__height = height
@@ -48,4 +48,4 @@ class Break(ToBend):
 
 b = ToBend()
 
-print(b.get_E)
+print(b.get_sigma)
